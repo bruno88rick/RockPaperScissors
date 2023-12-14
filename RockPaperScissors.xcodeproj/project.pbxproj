@@ -11,6 +11,7 @@
 		B64E077B2B29A93F005864EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E077A2B29A93F005864EA /* ContentView.swift */; };
 		B64E077D2B29A945005864EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64E077C2B29A945005864EA /* Assets.xcassets */; };
 		B64E07802B29A945005864EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64E077F2B29A945005864EA /* Preview Assets.xcassets */; };
+		B67C06D62B2AF4360015AFBA /* ElementImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C06D52B2AF4360015AFBA /* ElementImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B64E077A2B29A93F005864EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B64E077C2B29A945005864EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B64E077F2B29A945005864EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B67C06D52B2AF4360015AFBA /* ElementImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				B64E07782B29A93F005864EA /* RockPaperScissorsApp.swift */,
 				B64E077A2B29A93F005864EA /* ContentView.swift */,
+				B67C06D52B2AF4360015AFBA /* ElementImage.swift */,
 				B64E077C2B29A945005864EA /* Assets.xcassets */,
 				B64E077E2B29A945005864EA /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B64E077B2B29A93F005864EA /* ContentView.swift in Sources */,
+				B67C06D62B2AF4360015AFBA /* ElementImage.swift in Sources */,
 				B64E07792B29A93F005864EA /* RockPaperScissorsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
