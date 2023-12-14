@@ -11,6 +11,7 @@
 		B64E077B2B29A93F005864EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E077A2B29A93F005864EA /* ContentView.swift */; };
 		B64E077D2B29A945005864EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64E077C2B29A945005864EA /* Assets.xcassets */; };
 		B64E07802B29A945005864EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64E077F2B29A945005864EA /* Preview Assets.xcassets */; };
+		B651FCA52B2B47D200F0C9F7 /* ElementsArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651FCA42B2B47D200F0C9F7 /* ElementsArea.swift */; };
 		B67C06D62B2AF4360015AFBA /* ElementImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C06D52B2AF4360015AFBA /* ElementImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		B64E077A2B29A93F005864EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B64E077C2B29A945005864EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B64E077F2B29A945005864EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B651FCA42B2B47D200F0C9F7 /* ElementsArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsArea.swift; sourceTree = "<group>"; };
 		B67C06D52B2AF4360015AFBA /* ElementImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +55,7 @@
 		B64E07772B29A93F005864EA /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				B651FCA42B2B47D200F0C9F7 /* ElementsArea.swift */,
 				B64E07782B29A93F005864EA /* RockPaperScissorsApp.swift */,
 				B64E077A2B29A93F005864EA /* ContentView.swift */,
 				B67C06D52B2AF4360015AFBA /* ElementImage.swift */,
@@ -143,6 +146,7 @@
 				B64E077B2B29A93F005864EA /* ContentView.swift in Sources */,
 				B67C06D62B2AF4360015AFBA /* ElementImage.swift in Sources */,
 				B64E07792B29A93F005864EA /* RockPaperScissorsApp.swift in Sources */,
+				B651FCA52B2B47D200F0C9F7 /* ElementsArea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

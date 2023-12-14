@@ -7,46 +7,67 @@
 
 import SwiftUI
 
+extension View {
+    
+    func isHiddenConditionaly(isHidden: Bool) -> some View {
+        isHidden ? AnyView(self.hidden()) : AnyView(self)
+    }
+    
+}
+
 struct ContentView: View {
     
     @State private var elements = ["Rock", "Paper", "Scissors"]
+    @State private var elementsAreaHidden = false
     
     var body: some View {
         ZStack{
-            LinearGradient(colors: [.white, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+            RadialGradient(stops: [
+                .init(color: Color(red: 0.1, green: 0.2, blue: 0.45), location: 0.25),
+                .init(color: .white, location: 0.3)
+            ], center: .top, startRadius: 345, endRadius: 700)
                 .ignoresSafeArea()
             
             VStack {
+                
                 ElementImage(image: "title")
                     .imageScale(.medium)
-                    .foregroundStyle(.tint)
-                Text("You")
+                
+                Text("You 👇")
                     .padding(10)
                     .font(.title.bold())
-                    .foregroundStyle(.primary)
-                VStack(alignment: .center, spacing: 10){
-                    Text("Choose Your Element")
-                        .font(.title2.bold())
-                        .fontDesign(.rounded)
-                        .foregroundStyle(.secondary)
-                    HStack(spacing: 30) {
-                        ForEach (0..<3) { element in
-                            Button {
-                                
-                            } label: {
-                                ElementImage(image: elements[element])
-                                    .shadow(color: .black, radius: 10, x: 0.1, y: 1.0)
-                            }
-                        }
-                    }
-                }
+                    .foregroundStyle(.white)
+                
+                ElementsArea(elements: elements, isOpponentElements: false)
+                
+                Spacer()
                 Spacer()
                 Spacer()
                 
+                Text("Your Opponent 👇")
+                    .padding(10)
+                    .font(.title2.bold())
+                    .foregroundStyle(.black)
+                
+                Spacer()
+                
+                ElementsArea(elements: elements, isOpponentElements: true)
+                    .isHiddenConditionaly(isHidden: elementsAreaHidden)
+            
+                VStack(spacing: 5) {
+                
+                    Text("You Win!")
+                        .font(.largeTitle.bold())
+                    
+                    Text("Your Score is YY of XX")
+                        .font(.headline.bold())
+                    
+                }
                 
             }
             .padding(30)
-            .frame(alignment: .top)
+            .frame(alignment: .center)
+            
         }
         
     }
