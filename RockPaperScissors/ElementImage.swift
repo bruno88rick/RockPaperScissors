@@ -16,5 +16,5 @@ struct ElementImage: View {
 }
 
 #Preview {
-    ElementImage(image: "Rock")
+    ElementImage(image: "Paper")
 }

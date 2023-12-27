@@ -12,7 +12,10 @@
 		B64E077D2B29A945005864EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64E077C2B29A945005864EA /* Assets.xcassets */; };
 		B64E07802B29A945005864EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64E077F2B29A945005864EA /* Preview Assets.xcassets */; };
 		B651FCA52B2B47D200F0C9F7 /* ElementsArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651FCA42B2B47D200F0C9F7 /* ElementsArea.swift */; };
+		B66330E82B3C1ED300024FE2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66330E72B3C1ED300024FE2 /* Extensions.swift */; };
 		B67C06D62B2AF4360015AFBA /* ElementImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C06D52B2AF4360015AFBA /* ElementImage.swift */; };
+		B68633212B3C9CE600B48E37 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68633202B3C9CE600B48E37 /* LoadingView.swift */; };
+		B68633232B3CDAA700B48E37 /* GameBackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68633222B3CDAA700B48E37 /* GameBackEnd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +25,10 @@
 		B64E077C2B29A945005864EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B64E077F2B29A945005864EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B651FCA42B2B47D200F0C9F7 /* ElementsArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsArea.swift; sourceTree = "<group>"; };
+		B66330E72B3C1ED300024FE2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B67C06D52B2AF4360015AFBA /* ElementImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementImage.swift; sourceTree = "<group>"; };
+		B68633202B3C9CE600B48E37 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B68633222B3CDAA700B48E37 /* GameBackEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackEnd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +61,12 @@
 		B64E07772B29A93F005864EA /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				B66330E62B3C1DCD00024FE2 /* Helpers */,
 				B651FCA42B2B47D200F0C9F7 /* ElementsArea.swift */,
+				B68633202B3C9CE600B48E37 /* LoadingView.swift */,
 				B64E07782B29A93F005864EA /* RockPaperScissorsApp.swift */,
 				B64E077A2B29A93F005864EA /* ContentView.swift */,
+				B68633222B3CDAA700B48E37 /* GameBackEnd.swift */,
 				B67C06D52B2AF4360015AFBA /* ElementImage.swift */,
 				B64E077C2B29A945005864EA /* Assets.xcassets */,
 				B64E077E2B29A945005864EA /* Preview Content */,
@@ -71,6 +80,14 @@
 				B64E077F2B29A945005864EA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B66330E62B3C1DCD00024FE2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B66330E72B3C1ED300024FE2 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68633232B3CDAA700B48E37 /* GameBackEnd.swift in Sources */,
+				B66330E82B3C1ED300024FE2 /* Extensions.swift in Sources */,
 				B64E077B2B29A93F005864EA /* ContentView.swift in Sources */,
 				B67C06D62B2AF4360015AFBA /* ElementImage.swift in Sources */,
 				B64E07792B29A93F005864EA /* RockPaperScissorsApp.swift in Sources */,
 				B651FCA52B2B47D200F0C9F7 /* ElementsArea.swift in Sources */,
+				B68633212B3C9CE600B48E37 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
