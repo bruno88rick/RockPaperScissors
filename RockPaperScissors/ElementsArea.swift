@@ -5,6 +5,8 @@
 //  Created by Bruno Oliveira on 14/12/23.
 //
 
+//This code are not used yet to the app, but staying here for learning
+
 import SwiftUI
 
 struct ElementsArea: View {

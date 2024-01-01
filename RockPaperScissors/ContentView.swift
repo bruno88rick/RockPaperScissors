@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var elementsAreaHidden = false
     @State private var opponentChoose = 0
     @State private var userChoose = 0
+    @State private var score = 0
+    @State private var gameMatch = 0
     
     var body: some View {
         ZStack{
@@ -37,7 +39,38 @@ struct ContentView: View {
                     .font(.title.bold())
                     .foregroundStyle(.white)
                 
-                ElementsArea(elements: elements, isOpponentElements: false)
+                //User Elements
+                //ElementsArea(elements: elements, isOpponentElements: false)
+                
+                ZStack{
+                    
+                    VStack(alignment: .center, spacing: 20){
+                        Spacer()
+                        Text("Choose your Element:")
+                            .font(.title3.bold())
+                            .fontDesign(.rounded)
+                            .foregroundStyle(.primary)
+                        HStack(spacing: 30) {
+                            ForEach (0..<3) { element in
+                                Button {
+                                        
+                                } label: {
+                                    ElementImage(image: elements[element])
+                                        .shadow(color: .black, radius: 10, x: 0.1, y: 1.0)
+                                }
+                            }
+                        }
+                    }
+                    .padding(5)
+                    .frame(maxWidth: 380, maxHeight: 250)
+                    .padding(.vertical, 5)
+                    .background(LinearGradient(colors: [.white, .white], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    //.clipShape(.rect(cornerRadius: 50))
+                    .cornerRadius(50, corners: [.topLeft, .topRight, .bottomRight] )
+                    .shadow(radius: 20)
+                }
+                
+                //End of User Elements
                 
                 Spacer()
                 Spacer()
@@ -50,8 +83,31 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                ElementsArea(elements: elements, isOpponentElements: true, opponentChoose: opponentChoose)
-                    //.isHiddenConditionaly(isHidden: elementsAreaHidden)
+                //oppoent elements
+                
+                ZStack{
+                    
+                    VStack(alignment: .center, spacing: 20){
+                        Spacer()
+                        Text("Opponent Element:")
+                            .font(.title3.bold())
+                            .fontDesign(.rounded)
+                            .foregroundStyle(.white)
+                        HStack(spacing: 30) {
+                            
+                            ElementImage(image: elements[opponentChoose])
+                            
+                        }
+                    }
+                    .padding(5)
+                    .frame(maxWidth: 380, maxHeight: 250)
+                    .padding(.vertical, 5)
+                    .background(LinearGradient(colors: [Color(red: 0.1, green: 0.2, blue: 0.45), Color(red: 0.1, green: 0.2, blue: 0.45)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    //.clipShape(.rect(cornerRadius: 50))
+                    .cornerRadius(50, corners: [.topLeft, .topRight, .bottomLeft])
+                    .shadow(radius: 20)
+                    LoadingView(loadingText: "Chosen, waiting for you...")
+                }
             
                 VStack(spacing: 5) {
                 
@@ -67,17 +123,12 @@ struct ContentView: View {
             }
             .padding(30)
             .frame(alignment: .center)
-            
         }
-        
     }
     
-    func newGame () {
-        
-        opponentChoose = Int.random(in: 0..<3)
+    func newGame () {        
         
     }
-    
 }
 
 #Preview {
