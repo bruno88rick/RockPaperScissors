@@ -7,51 +7,39 @@
 
 import Foundation
 
-enum elements: Int {
-    case Paper = 0
-    case Rock = 1
-    case Scissors = 2
-}
-
-struct Game {
+struct GameBackEnd {
     
-    func UserIstheWinner (userChoose: Int, opponentChoose: Int) -> Bool {
+    var totalScore = 0
+    var gameMatch = 0
+    
+    func elementTapped (userChoose: Int, opponentChoose: Int) -> MatchResult {
         
         switch userChoose {
-        case elements.Paper.rawValue:
-            if opponentChoose == elements.Paper.rawValue {
-                
-            } else if opponentChoose == elements.Rock.rawValue {
-                
-            } else if opponentChoose == elements.Scissors.rawValue {
-                
+        case Elements.Paper.rawValue:
+            if opponentChoose == Elements.Paper.rawValue {
+                return MatchResult.tie
+            } else if opponentChoose == Elements.Rock.rawValue {
+                return MatchResult.victory
             } else {
-                
+                return MatchResult.loose
             }
-        case elements.Rock.rawValue:
-            if opponentChoose == elements.Paper.rawValue {
-                
-            } else if opponentChoose == elements.Rock.rawValue {
-                
-            } else if opponentChoose == elements.Scissors.rawValue {
-                
+        case Elements.Rock.rawValue:
+            if opponentChoose == Elements.Paper.rawValue {
+                return MatchResult.loose
+            } else if opponentChoose == Elements.Rock.rawValue {
+                return MatchResult.tie
             } else {
-                
+                return MatchResult.victory
             }
-        case elements.Scissors.rawValue:
-            if opponentChoose == elements.Paper.rawValue {
-                
-            } else if opponentChoose == elements.Rock.rawValue {
-                
-            } else if opponentChoose == elements.Scissors.rawValue {
-                
+        case Elements.Scissors.rawValue:
+            if opponentChoose == Elements.Paper.rawValue {
+                return MatchResult.victory
+            } else if opponentChoose == Elements.Rock.rawValue {
+                return MatchResult.loose
             } else {
-                
+                return MatchResult.tie
             }
-        default: break
+        default: return MatchResult.error
         }
-        return true
-        
     }
-    
 }

@@ -8,6 +8,23 @@
 import SwiftUI
 import Foundation
 
+enum Elements: Int {
+    case Paper = 0
+    case Rock = 1
+    case Scissors = 2
+}
+
+enum GameError: Error  {
+    case GameError
+}
+
+enum MatchResult {
+    case victory
+    case loose
+    case tie
+    case error
+}
+
 extension View {
     
     func isHiddenConditionaly(isHidden: Bool) -> some View {
